@@ -20,7 +20,7 @@ Tm=Tm(2:end);
 TmStr=[num2str(Tm(2)) '-' num2str(Tm(1)) '_' num2str(round(Tm(3))) num2str(Tm(4))];
 %Tm(1) = month, Tm(2) = day, Tm(3) = hour, Tm(4) = minute, Tm(5) = seconds 
 
-flnm=[Patient '_' Operator '_' 'Exposure-' num2str(expos*1e3) 'ms_Gain_' num2str(gain) '_Time-' TmStr ];
+flnm=['Flash_' Patient '_' Operator '_' 'Exposure-' num2str(expos*1e3) 'ms_Gain_' num2str(gain) '_Time-' TmStr ];
 dir=get(dirString,'String');
 
 
@@ -145,6 +145,6 @@ fmtval=get(formatMenu,'Value');
 fmt=char(fmts(fmtval));
 
 save([dir '/' flnm '.mat'],'FlashDisp');
-imwrite(FlashDisp,[dir '/' flnm fmt]);
+imwrite(mat2gray(FlashDisp),[dir '/' flnm fmt]);
 
 
