@@ -9,8 +9,6 @@ if exist('hFig')
     clear
 end
 
-cd('C:\Users\Daniel Geddes\Desktop\TOPCON_GUI_KIRALUX_WORKING')
-
 
 NET.addAssembly([pwd, '\Thorlabs.TSI.TLCamera.dll']); %Loads dll files for camera
 disp('Dot NET assembly loaded.')
