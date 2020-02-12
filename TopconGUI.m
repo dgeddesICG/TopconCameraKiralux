@@ -12,7 +12,7 @@ end
   if ~exist('FlashData', 'dir')
        mkdir('FlashData')
   end
-
+cd('C:\Users\Daniel Geddes\Desktop\topcon-gui')
 
 NET.addAssembly([pwd, '\Thorlabs.TSI.TLCamera.dll']); %Loads dll files for camera
 disp('Dot NET assembly loaded.')
